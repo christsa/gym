@@ -20,6 +20,9 @@ class TimeLimit(gym.Wrapper):
             done = True
         return observation, reward, done, info
 
+    def update_goal(self):
+        return self.env._update_goal()
+
     def reset(self, **kwargs):
         self._elapsed_steps = 0
         return self.env.reset(**kwargs)

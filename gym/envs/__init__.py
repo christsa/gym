@@ -332,12 +332,38 @@ register(
     max_episode_steps=1000,
 )
 
+# Human Robot Interaction
+# ----------------------------------------
+
+register(
+    id='HriHandshake-v0',
+    entry_point='gym.envs.human_robot_interaction:HriHandshakeEnv',
+    max_episode_steps=100,
+    kwargs={'yaml_name': 'handshake'}
+)
+
+register(
+    id='HriHandclap-v0',
+    entry_point='gym.envs.human_robot_interaction:HriHandclapEnv',
+    max_episode_steps=75,
+    kwargs={'yaml_name': 'handclap'}
+)
+
+register(
+    id='HriET-v0',
+    entry_point='gym.envs.human_robot_interaction:HriEtEnv',
+    max_episode_steps=75,
+    kwargs={'yaml_name': 'et'}
+)
+
+
 # Robotics
 # ----------------------------------------
 
 def _merge(a, b):
     a.update(b)
     return a
+
 
 for reward_type in ['sparse', 'dense']:
     suffix = 'Dense' if reward_type == 'dense' else ''
