@@ -12,6 +12,7 @@ extras = {
   'classic_control': [],
   'mujoco': ['mujoco_py>=1.50, <2.0', 'imageio'],
   'robotics': ['mujoco_py>=1.50, <2.0', 'imageio'],
+
 }
 
 # Meta dependency groups.
@@ -29,7 +30,7 @@ setup(name='gym',
       zip_safe=False,
       install_requires=[
           'scipy', 'numpy>=1.10.4', 'six', 'pyglet>=1.2.0,<=1.3.2', 'cloudpickle~=1.2.0',
-          'enum34~=1.1.6;python_version<"3.4"', 'opencv-python'
+          'enum34~=1.1.6;python_version<"3.4"', 'opencv-python', 'pyyaml', 'pyquaternion', 'mujoco_py'
       ],
       extras_require=extras,
       package_data={'gym': [

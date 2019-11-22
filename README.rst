@@ -1,4 +1,10 @@
-**Status:** Maintenance (expect bug fixes and minor updates)
+Demonstration-Guided Deep Reinforcement Learning of Control Policies for Dexterous Human-Robot Interaction
+**********
+The environments used in the paper https://arxiv.org/abs/1906.11695 have been built into a forked version of OpenAI Gym.
+They are located at https://github.com/christsa/gym/tree/master/gym/envs/human_robot_interaction.
+
+Note that they require MuJoCo (version < 2.0 as with the latest update of gym).
+
 
 OpenAI Gym
 **********
